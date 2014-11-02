@@ -1,0 +1,307 @@
+// Styleguide
+
+%sg-h1 {
+  font-family: $serif;
+  font-size: 2rem;
+  font-weight: $type-black;
+  color: $dark-black;
+  @include font-feature-settings("lnum");
+  line-height: 1;
+  &.headline-big {
+    font-size: 3rem;
+    @include media($medium-only) {
+      font-size: 3.5rem;
+    }
+    @include media($large-up) {
+      font-size: 4rem;
+    }
+    @include media($xlarge-up) {
+      font-size: 4.5rem;
+    }
+  }
+  &.headline-mid {
+    font-size: 1.5rem;
+    @extend %aa-text;
+  }
+  &.headline-small {
+    font-size: 1.25rem;
+    @extend %aa-text;
+  }
+  &.product-card-title {
+    font-size: 1rem;
+    @extend %aa-text;
+    @include media($medium-up) {
+      font-size: 1.25rem;
+    }
+  }
+  &.headline-sans {
+    font-family: $sans;
+    font-weight: $type-bold;
+  }
+  a {
+    color: $mid-black;
+    @include transition(color $hover-out ease-out);
+    &:hover {
+      color: $black;
+      @include transition(color $hover-in ease-out);
+    }
+  }
+}
+
+%sg-h2 {
+  font-family: $sans;
+  font-size: 1.5rem;
+  font-weight: $type-bold;
+  color: $mid-black;
+}
+
+%sg-h3 {
+  font-family: $sans;
+  font-size: 1.25rem;
+  line-height: 1;
+  font-weight: $type-bold;
+  @extend %ot-settings;
+  color: $mid-black;
+  &.headline-small {
+    font-size: 1rem;
+  }
+}
+
+%sg-h4 {
+  font-family: $sans;
+  font-size: 0.875rem;
+  font-weight: $type-light;
+  @extend %ot-settings;
+  letter-spacing: 0.05em;
+  color: $text-light-grey;
+  &.price {
+    font-weight: $type-book;
+    color: $mid-black;
+  }
+}
+
+%sg-h5 {
+  font-family: $sans;
+  font-size: .8125rem;
+  font-weight: $type-light;
+  @extend %ot-settings;
+  letter-spacing: 0.05em;
+  color: $text-light-grey;
+}
+
+%sg-h6 {
+  font-family: $sans;
+  text-transform: uppercase;
+  font-weight: $type-bold;
+  @extend %aa-text;
+  letter-spacing: 1px;
+  font-size: 0.6875rem;
+}
+
+%sg-body-copy {
+  font-family: $sans;
+  font-weight: $type-book;
+  color: $text-grey-paragraph;
+  @extend %ot-settings;
+  font-size: 0.875rem;
+  line-height: 1.8;
+  @include media($xlarge-up) {
+    font-size: 0.938rem;
+  }
+  a {
+    font-weight: $type-medium;
+    color: $light-black;
+    border-bottom: $border-trans;
+    @include transition(all $hover-out ease-out);
+    &:hover {
+      color: $mid-black;
+      border-bottom: $border-gold;
+    }
+  }
+  strong {
+    color: $mid-black;
+  }
+  &.p-small {
+    font-size: 0.8125rem;
+    @include media($xlarge-up) {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.text-link {
+  font-size: 0.8125rem;
+  color: $text-light-grey;
+  font-weight: $type-book;
+  text-transform: uppercase;
+  @extend %ot-settings;
+  &.text-link-small {
+    font-size: 0.6875rem;
+  }
+  &.link-active {
+    color: $text-grey-paragraph;
+  }
+}
+
+a.text-link {
+  @include transition(color $hover-out ease-out);
+  &:hover {
+    color: $text-grey-paragraph;
+    cursor: pointer;
+    @include transition(color $hover-in ease-out);
+  }
+}
+
+.nav-link {
+  font-family: $sans;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  font-weight: $type-bold;
+  @extend %aa-text;
+  letter-spacing: 1px;
+  &.nav-link-big {
+    font-size: 1.5rem;
+  }
+  &.nav-link-medium {
+    font-size: 0.75rem;
+  }
+  &.nav-link-small {
+    font-size: 0.6875rem;
+  }
+}
+
+a.nav-link {
+  span {
+    color: $mid-black;
+    border-bottom: $border-trans;
+    @include transition(all $hover-out ease-out);
+  }
+  &:hover {
+    span {
+      color: $gold;
+      border-bottom: $border-gold;
+    }
+  }
+  .footer-links &, .footer-sub & {
+    color: $text-mid-grey;
+    border-bottom: $border-trans;
+    @include transition(all $hover-out ease-out);
+    &:hover {
+      color: $white;
+      border-bottom: 1px solid $text-dark-grey;
+    }
+  }
+  &.active {
+    span {
+      border-bottom: $border-gold;
+    }
+  }
+}
+
+.sans-link {
+  @extend %sg-h2;
+  line-height: 1;
+  @extend %aa-text;
+}
+
+a.sans-link {
+  color: $mid-black;
+  border-bottom: $border-trans;
+  @include transition(all $hover-out ease-out);
+  &:hover {
+    color: $gold;
+    border-bottom: $border-gold;
+  }
+  &.link-active {
+    border-bottom: $border-gold;
+  }
+}
+
+.item-size {
+  font-weight: $type-bold;
+  font-size: 0.938rem;
+  display: inline-block;
+  @extend %ot-settings;
+  white-space: pre;
+  padding: 0.35rem 0.35rem;
+  min-width: 2.25rem;
+  text-align: center;
+  color: $dark-black;
+  border: 3px solid $mid-grey;
+  position: relative;
+  z-index: 2;
+  line-height: 1.4;
+  @include media($medium-up) {
+    font-size: 0.8125rem;
+  }
+}
+
+// .bumped-heading {
+//   padding: 1rem;
+//   background: $light-grey;
+// }
+
+h1 {
+  @extend %sg-h1;
+}
+
+h2 {
+  @extend %sg-h2;
+}
+
+h3 {
+  @extend %sg-h3;
+}
+
+h4 {
+  @extend %sg-h4;
+}
+
+h5 {
+  @extend %sg-h5;
+}
+
+h6 {
+  @extend %sg-h6;
+}
+
+p {
+  @extend %sg-body-copy;
+}
+
+.mast-with-stroke {
+  text-align: center;
+  @include media($large-up) {
+    text-align: left;
+  }
+  h1 {
+    position: relative;
+    span {
+      background: $white;
+      position: relative;
+      z-index: 2;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      @include media($medium-up) {
+        padding-left: 0;
+        padding-right: 1rem;
+      }
+    }
+    &.center {
+      span {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      right: 0;
+      margin-top: -1px;
+      border-bottom: $standard-border;
+    }
+  }
+}

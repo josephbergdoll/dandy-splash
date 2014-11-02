@@ -1,0 +1,201 @@
+// Icons
+
+%icon-one-hover {
+  position: relative;
+  display: block;
+  @extend %hide-text;
+  &:after {
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat !important;
+    z-index: 4;
+    @include transition($short-transition opacity ease-out);
+  }
+  &:hover {
+    &:after {
+      @include transition($hover-in opacity ease-out);
+    }
+  }
+}
+
+%icon-two-hover {
+  position: relative;
+  display: block;
+  @extend %hide-text;
+  &:before, &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+  &:before {
+    z-index: 0;
+    opacity: 1;
+    @include transition($short-transition opacity ease-out);
+  }
+  &:after {
+    opacity: 0;
+    z-index: 4;
+    @include transition($short-transition opacity ease-out);
+  }
+  &:hover {
+    &:before {
+      opacity: 0;
+      @include transition($hover-in opacity ease-out);
+    }
+    &:after {
+      opacity: 1;
+      @include transition($hover-in opacity ease-out);
+    }
+  }
+}
+
+%inline-icon {
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    @include transition(all $hover-out ease-out);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+}
+
+%inline-icon-before {
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    @include transition(all $hover-out ease-out);
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+}
+
+%inline-icon-right {
+  padding-right: 1.125em;
+  @extend %inline-icon;
+  &:after {
+    top: 0.33em;
+    right: 0;
+  }
+}
+
+%inline-icon-cart {
+  padding-left: 1.5em;
+  @extend %inline-icon-before;
+  &:before {
+    top: 0.125em;
+    left: 0;
+  }
+}
+
+%hover-inline-icon {
+  &:after {
+    @include transform(translateX(0.25rem));
+    @include transition(all $hover-in ease-out);
+  }
+}
+
+%icon-arrow-r-white {
+  @include background-file("icon-arrow-r_white.svg");
+  width: 0.75em;
+  height: 0.75em;
+}
+
+%icon-cart-black {
+  @include background-file("icon-cart_black.svg");
+  width: 1.125em;
+  height: 1.125em;
+}
+
+%icon-cart-white {
+  @include background-file("icon-cart_white.svg");
+  width: 0.85em;
+  height: 0.85em;
+}
+
+.arrow-r-white {
+  @extend %inline-icon-right;
+  &:after {
+    @extend %icon-arrow-r-white;
+  }
+}
+
+.cart-white {
+  @extend %inline-icon-right;
+  &:after {
+    @extend %icon-cart-white;
+  }
+}
+
+.x-close-white {
+  @extend %icon-one-hover;
+  width: 2.5rem;
+  height: 2.5rem;
+  &:after {
+    @include background-file("icon-x_white.svg");
+    background-size: 40%;
+    background-position: center center;
+    opacity: 0.35;
+  }
+  &:hover {
+    &:after {
+      opacity: 0.8;
+    }
+  }
+}
+
+.x-close-black {
+  width: 0.85rem;
+  height: 0.85rem;
+  @include background-file("icon-x_black.svg");
+  background-size: 70%;
+  background-position: center center;
+  background-repeat: no-repeat !important;
+  z-index: 4;
+  opacity: 0.35;
+}
+
+// Icomoon
+
+// [class^="footer-icon-"], [class*="footer-icon-"] {
+//   font-family: 'icomoon' !important;
+//   speak: none;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-variant: normal;
+//   text-transform: none;
+//   line-height: 1;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   font-size: 1rem !important;
+//   position: relative;
+//   top: -0.25rem;
+// }
+
+// .footer-icon-instagram:before {
+//   content: "\e601";
+// }
+// .footer-icon-tumblr:before {
+//   content: "\e602";
+// }
+// .footer-icon-facebook:before {
+//   content: "\e600";
+// }
+// .footer-icon-twitter:before {
+//   content: "\e603";
+// }
+// .footer-icon-vimeo:before {
+//   content: "\e604";
+// }
