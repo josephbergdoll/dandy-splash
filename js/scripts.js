@@ -11,6 +11,10 @@ $(document).ready(function() {
     event.preventDefault();
     $('body').toggleClass('dandy-clicked');
   });
+
+  $('a.link-outer').hover(function() {
+    $('body').toggleClass('link-outer-hovered');
+  });
 });
 
 $(window).load(function() {

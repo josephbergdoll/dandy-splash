@@ -27,7 +27,7 @@ body {
   background: $white;
   color: $mid-black;
   font-feature-settings: "kern" 1;
-  @include transition(background $short-transition $cubic-ease);
+  @include transition(background $short-transition ease-out);
 }
 
 ::selection {

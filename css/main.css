@@ -97,9 +97,9 @@ body {
   background: white;
   color: #333;
   font-feature-settings: "kern" 1;
-  -webkit-transition: background 400ms cubic-bezier(0.47, 0, 0, 0.95);
-  -moz-transition: background 400ms cubic-bezier(0.47, 0, 0, 0.95);
-  transition: background 400ms cubic-bezier(0.47, 0, 0, 0.95); }
+  -webkit-transition: background 400ms ease-out;
+  -moz-transition: background 400ms ease-out;
+  transition: background 400ms ease-out; }
 
 ::selection {
   background: #f3f3f3;
@@ -278,23 +278,23 @@ a {
     .splash-wrap p a {
       color: transparent;
       padding-bottom: 0.05rem;
-      border-bottom: 2px solid transparent;
+      border-bottom: 0.125em solid transparent;
       -webkit-transition: all 800ms cubic-bezier(0.47, 0, 0, 0.95);
       -moz-transition: all 800ms cubic-bezier(0.47, 0, 0, 0.95);
       transition: all 800ms cubic-bezier(0.47, 0, 0, 0.95); }
   .splash-wrap .link-dandy {
     color: #333;
-    border-bottom: 2px solid #333;
+    border-bottom: 0.125em solid #333;
     opacity: 0; }
 
 .dandy-hovered {
-  background: #232323;
+  background: #111;
   -webkit-transition: background 800ms cubic-bezier(0.47, 0, 0, 0.95);
   -moz-transition: background 800ms cubic-bezier(0.47, 0, 0, 0.95);
   transition: background 800ms cubic-bezier(0.47, 0, 0, 0.95); }
   .dandy-hovered .link-dandy {
     color: white;
-    border-bottom: 2px solid white; }
+    border-bottom: 0.125em solid white; }
 
 .dandy-clicked {
   background: black;
@@ -305,23 +305,36 @@ a {
     color: #f3f3f3; }
     .dandy-clicked p a {
       color: white;
-      border-bottom: 2px solid #aaaaaa;
+      border-bottom: 0.125em solid #aaaaaa;
       -webkit-transition: all 400ms cubic-bezier(0.47, 0, 0, 0.95);
       -moz-transition: all 400ms cubic-bezier(0.47, 0, 0, 0.95);
       transition: all 400ms cubic-bezier(0.47, 0, 0, 0.95); }
       .dandy-clicked p a:hover {
-        border-bottom: 2px solid white;
+        border-bottom: 0.125em solid transparent;
         -webkit-transition: all 250ms cubic-bezier(0.47, 0, 0, 0.95);
         -moz-transition: all 250ms cubic-bezier(0.47, 0, 0, 0.95);
         transition: all 250ms cubic-bezier(0.47, 0, 0, 0.95); }
   .dandy-clicked .link-dandy {
     color: white;
-    border-bottom: 2px solid #aaaaaa;
+    border-bottom: 0.125em solid #aaaaaa;
     -webkit-transition: all 400ms cubic-bezier(0.47, 0, 0, 0.95);
     -moz-transition: all 400ms cubic-bezier(0.47, 0, 0, 0.95);
     transition: all 400ms cubic-bezier(0.47, 0, 0, 0.95); }
     .dandy-clicked .link-dandy:hover {
-      border-bottom: 2px solid white;
+      border-bottom: 0.125em solid transparent;
       -webkit-transition: all 250ms cubic-bezier(0.47, 0, 0, 0.95);
       -moz-transition: all 250ms cubic-bezier(0.47, 0, 0, 0.95);
       transition: all 250ms cubic-bezier(0.47, 0, 0, 0.95); }
+
+.link-outer-hovered {
+  background: white;
+  -webkit-transition: background 400ms ease-out;
+  -moz-transition: background 400ms ease-out;
+  transition: background 400ms ease-out; }
+  .link-outer-hovered p {
+    color: transparent; }
+    .link-outer-hovered p a {
+      color: transparent;
+      border-bottom: 0.125em solid transparent !important; }
+      .link-outer-hovered p a:hover {
+        color: black; }
