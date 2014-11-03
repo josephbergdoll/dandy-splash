@@ -21,15 +21,13 @@ body {
   line-height: 1.5;
   width: 100%;
   -webkit-tap-highlight-color: black;
-  min-height: 100%;
+  height: 100%;
   font-family: $sans;
-  font-weight: $type-book;
+  font-weight: normal;
   background: $white;
-  color: $black;
+  color: $mid-black;
   font-feature-settings: "kern" 1;
-  @include media($large-up) {
-    border: 4px solid $dark-black;
-  }
+  @include transition(background $short-transition $cubic-ease);
 }
 
 ::selection {
