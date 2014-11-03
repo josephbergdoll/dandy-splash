@@ -2,60 +2,13 @@
 @import "bourbon";
 @import "global/_grid-settings";
 @import "neat/neat";
-@import "helpers/_asset-helper";
 
 // Globals
 @import "global/_fonts";
 @import "global/_variables";
-@import "global/_animations";
 @import "global/_mixins";
-@import "global/_icons";
 @import "global/_base";
-@import "global/_styleguide";
-@import "global/_forms";
-@import "global/_utils";
 @import "global/_layout";
 
-// Components
-@import "components/_header";
-@import "components/_mobile-nav";
-@import "components/_footer";
-@import "components/_loader";
-@import "components/_product-card";
-@import "components/_collection-card";
-@import "components/_news-card";
-@import "components/_well-aged-card";
-@import "components/_well-aged-photo";
-@import "components/_featured-news-card";
-@import "components/_breadcrumb";
-@import "components/_collection-inner-nav";
-@import "components/_blog-sidebar";
-@import "components/_pagination";
-@import "components/_slider";
-@import "components/_line-item";
-@import "components/_product-scrolled";
-@import "components/_related-products";
-@import "components/_index-collections";
-@import "components/_instagram";
-@import "components/_maintenance";
-@import "components/_error-404";
-
-// Customers Section
-@import "customers/_login";
-@import "customers/_account";
-
-// Templates
-@import "templates/_index";
-@import "templates/_collection";
-@import "templates/_page";
-@import "templates/_blog";
-@import "templates/_blog-well-aged";
-@import "templates/_article";
-@import "templates/_article-well-aged";
-@import "templates/_page-retailers";
-@import "templates/_page-about";
-@import "templates/_page-measuring-guide";
-@import "templates/_product";
-@import "templates/_stock_contact";
-@import "templates/_cart";
-@import "templates/_ajax-cart";
+//Components
+@import "components/_splash";
