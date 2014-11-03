@@ -284,7 +284,8 @@ a {
       transition: all 800ms cubic-bezier(0.47, 0, 0, 0.95); }
   .splash-wrap .link-dandy {
     color: #333;
-    border-bottom: 2px solid #333; }
+    border-bottom: 2px solid #333;
+    opacity: 0; }
 
 .dandy-hovered {
   background: #232323;

@@ -12,3 +12,11 @@ $(document).ready(function() {
     $('body').toggleClass('dandy-clicked');
   });
 });
+
+$(window).load(function() {
+
+  setTimeout(function() {
+    $('a.link-dandy').css("opacity","1");
+  },650);
+
+});
