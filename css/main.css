@@ -60,6 +60,12 @@ table {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+@font-face {
+  font-family: 'Dandy-GT-Haptik';
+  src: url("GT-Haptik-Regular.eot");
+  src: url("GT-Haptik-Regular.eot?#iefix ") format("embedded-opentype"), url("GT-Haptik-Regular.woff") format("woff"), url("GT-Haptik-Regular.ttf") format("truetype"), url("GT-Haptik-Regular.svg") format("svg");
+  font-style: normal;
+  font-weight: normal; }
 body, html {
   margin: 0;
   padding: 0; }
@@ -77,7 +83,7 @@ body {
   width: 100%;
   -webkit-tap-highlight-color: black;
   height: 100%;
-  font-family: "GT Haptik", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: "GT Haptik", "Dandy-GT-Haptik", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: normal;
   background: white;
   color: #333;

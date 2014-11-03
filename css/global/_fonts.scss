@@ -1,6 +1,12 @@
 //Fonts
 
-
-
-
-
+@font-face {
+  font-family: 'Dandy-GT-Haptik';
+  src: url('GT-Haptik-Regular.eot');
+  src: url('GT-Haptik-Regular.eot?#iefix ') format("embedded-opentype"),
+       url('GT-Haptik-Regular.woff') format("woff"),
+       url('GT-Haptik-Regular.ttf') format("truetype"),
+       url('GT-Haptik-Regular.svg') format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
