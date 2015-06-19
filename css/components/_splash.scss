@@ -3,6 +3,8 @@
 .splash-wrap {
   height: inherit;
   text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
   p {
     font-size: 0.875rem;
     line-height: 1.7;
@@ -34,11 +36,13 @@
 }
 
 .dandy-hovered {
-  background: $black;
-  @include transition(background $long-transition $cubic-ease);
-  .link-dandy {
-    color: $white;
-    border-bottom: 0.125em solid $white;
+  @include media($medium-up) {
+    background: $black;
+    @include transition(background $long-transition $cubic-ease);
+    .link-dandy {
+      color: $white;
+      border-bottom: 0.125em solid $white;
+    }
   }
 }
 
@@ -69,15 +73,17 @@
 }
 
 .link-outer-hovered {
-  background: $white;
-  @include transition(background $short-transition ease-out);
-  p {
-    color: transparent;
-    a {
+  @include media($medium-up) {
+    background: $white;
+    @include transition(background $short-transition ease-out);
+    p {
       color: transparent;
-      border-bottom: 0.125em solid transparent !important;
-      &:hover {
-        color: $black;
+      a {
+        color: transparent;
+        border-bottom: 0.125em solid transparent !important;
+        &:hover {
+          color: $black;
+        }
       }
     }
   }

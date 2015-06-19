@@ -91,7 +91,7 @@ body {
   line-height: 1.5;
   width: 100%;
   -webkit-tap-highlight-color: black;
-  height: 100%;
+  height: auto;
   font-family: "GT Haptik", "Dandy-GT-Haptik", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-weight: normal;
   background: white;
@@ -146,10 +146,10 @@ a {
   -webkit-transition: padding 800ms ease-in-out;
   -moz-transition: padding 800ms ease-in-out;
   transition: padding 800ms ease-in-out; }
-  .wrapper:after {
+  .wrapper::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   @media screen and (min-width: 1024px) and (max-width: 1279px) {
     .wrapper {
       padding: 0 1.25rem; } }
@@ -242,10 +242,10 @@ a {
     .pad-to-large {
       padding: 0; } }
 
-.clearfix:after {
+.clearfix::after {
+  clear: both;
   content: "";
-  display: table;
-  clear: both; }
+  display: table; }
 
 .link-card {
   display: block; }
@@ -258,7 +258,9 @@ a {
 
 .splash-wrap {
   height: inherit;
-  text-align: center; }
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 6rem; }
   .splash-wrap p {
     font-size: 0.875rem;
     line-height: 1.7;
@@ -288,14 +290,15 @@ a {
     border-bottom: 0.125em solid transparent;
     opacity: 0; }
 
-.dandy-hovered {
-  background: black;
-  -webkit-transition: background 800ms cubic-bezier(0.47, 0, 0, 0.95);
-  -moz-transition: background 800ms cubic-bezier(0.47, 0, 0, 0.95);
-  transition: background 800ms cubic-bezier(0.47, 0, 0, 0.95); }
-  .dandy-hovered .link-dandy {
-    color: white;
-    border-bottom: 0.125em solid white; }
+@media screen and (min-width: 768px) {
+  .dandy-hovered {
+    background: black;
+    -webkit-transition: background 800ms cubic-bezier(0.47, 0, 0, 0.95);
+    -moz-transition: background 800ms cubic-bezier(0.47, 0, 0, 0.95);
+    transition: background 800ms cubic-bezier(0.47, 0, 0, 0.95); }
+    .dandy-hovered .link-dandy {
+      color: white;
+      border-bottom: 0.125em solid white; } }
 
 .dandy-clicked {
   background: black;
@@ -327,15 +330,16 @@ a {
       -moz-transition: all 250ms cubic-bezier(0.47, 0, 0, 0.95);
       transition: all 250ms cubic-bezier(0.47, 0, 0, 0.95); }
 
-.link-outer-hovered {
-  background: white;
-  -webkit-transition: background 400ms ease-out;
-  -moz-transition: background 400ms ease-out;
-  transition: background 400ms ease-out; }
-  .link-outer-hovered p {
-    color: transparent; }
-    .link-outer-hovered p a {
-      color: transparent;
-      border-bottom: 0.125em solid transparent !important; }
-      .link-outer-hovered p a:hover {
-        color: black; }
+@media screen and (min-width: 768px) {
+  .link-outer-hovered {
+    background: white;
+    -webkit-transition: background 400ms ease-out;
+    -moz-transition: background 400ms ease-out;
+    transition: background 400ms ease-out; }
+    .link-outer-hovered p {
+      color: transparent; }
+      .link-outer-hovered p a {
+        color: transparent;
+        border-bottom: 0.125em solid transparent !important; }
+        .link-outer-hovered p a:hover {
+          color: black; } }
